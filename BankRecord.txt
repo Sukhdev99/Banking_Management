@@ -1,0 +1,19 @@
+Account: Account: 1
+Name: ss
+Account Number: 12345678
+PIN: 1234
+Transfers: Amount: 1234
+
+Account: 2
+Name: dd
+Account Number: 12345687
+PIN: 1234
+Transfers: Amount: 1234
+
+FD Account: Account: 1
+Account Number: 12345678
+FD Creation Date: 2023-12-02
+Maturity date of the FD: 2024-12-02
+Amount user deposited for the FD: 5000.0
+Amount user will get after the completion of the FD: 5177.834764729852
+
