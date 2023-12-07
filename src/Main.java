@@ -9,6 +9,7 @@ class Main {
         }
          catch (Exception e) {
             System.out.println("\nWe triggered an Error");
+             Bank.mainMenu();
         }
     }
 }
