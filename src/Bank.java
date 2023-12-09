@@ -344,7 +344,10 @@ class Bank {
                 writer.newLine();
                 writer.newLine();
                 ArrayList<Transaction> transactions = element.getTransactions();
-                writer.write("-------------------Account Transactions-------------------------\n");
+                writer.write("-------------------Account Transactions--------------------------");
+                writer.newLine();
+                writer.write("-----------------------------------------------------------------");
+                writer.newLine();
                 for (Transaction T : transactions){
                     writer.write("Type: " + T.getType());
                     writer.newLine();
@@ -353,58 +356,62 @@ class Bank {
                     writer.write("Date: " + T.getDate());
                     writer.newLine();
                 }
-                writer.write("---------------------FD Accounts--------------------");
-                writer.write("----------------------------------------------------");
-                for (FixedDeposit fd : FDList) {
-                    if (AL.get(flag_racc-1).getAccountNumber() == fd.getAccountNumber()) {
-                        writer.newLine();
-                        writer.write("FD Creation Date: ");
-                        writer.write(String.valueOf(fd.getCreationDate()));
-                        writer.newLine();
-                        writer.write("Maturity date of the FD: ");
-                        writer.write(String.valueOf(fd.getMaturityDate()));
-                        writer.newLine();
-                        writer.write("Amount user deposited for the FD: ");
-                        writer.write(String.valueOf(fd.getPrincipal()));
-                        writer.newLine();
-                        writer.write("Amount user will get after the completion of the FD: ");
-                        writer.write(String.valueOf(fd.getMaturityAmount()));
-                        writer.newLine();
-                        writer.newLine();
-                    } else {
-                        writer.write("This Account does not have any Fixed Deposit.\n");
-                    }
-
-                }
+//                writer.write("---------------------FD Accounts--------------------");
+//                writer.write("----------------------------------------------------");
+//                for (FixedDeposit fd : FDList) {
+//                    if (AL.get(flag_racc-1).getAccountNumber() == fd.getAccountNumber()) {
+//                        writer.newLine();
+//                        writer.write("FD Creation Date: ");
+//                        writer.write(String.valueOf(fd.getCreationDate()));
+//                        writer.newLine();
+//                        writer.write("Maturity date of the FD: ");
+//                        writer.write(String.valueOf(fd.getMaturityDate()));
+//                        writer.newLine();
+//                        writer.write("Amount user deposited for the FD: ");
+//                        writer.write(String.valueOf(fd.getPrincipal()));
+//                        writer.newLine();
+//                        writer.write("Amount user will get after the completion of the FD: ");
+//                        writer.write(String.valueOf(fd.getMaturityAmount()));
+//                        writer.newLine();
+//                        writer.newLine();
+//                    } else {
+//                        writer.write("This Account does not have any Fixed Deposit.\n");
+//                    }
+//
+//                }
+//                writer.newLine();// Add a newline for each element
+            }
+            int flag_fdacc = 0;
+            writer.write("---------------------FD Accounts--------------------");
+            writer.newLine();
+            writer.write("----------------------------------------------------");
+            writer.newLine();
+            for (FixedDeposit element : FDList) {
+                flag_fdacc++;
+                writer.write("Account: " + flag_fdacc);
+                writer.newLine();
+                writer.write("Account Number: ");
+                writer.write(String.valueOf(element.getAccountNumber()));
+                writer.newLine();
+                writer.write("FD Creation Date: ");
+                writer.write(String.valueOf( element.getCreationDate()));
+                writer.newLine();
+                writer.write("Maturity date of the FD: ");
+                writer.write(String.valueOf( element.getMaturityDate()));
+                writer.newLine();
+                writer.write("Amount user deposited for the FD: ");
+                writer.write(String.valueOf( element.getPrincipal()));
+                writer.newLine();
+                writer.write("Amount user will get after the completion of the FD: ");
+                writer.write(String.valueOf( element.getMaturityAmount()));
+                writer.newLine();
                 writer.newLine();// Add a newline for each element
             }
-//            int flag_fdacc = 0;
-//            writer.write("FD Account: ");
-//            for (FixedDeposit element : FDList) {
-//                flag_fdacc++;
-//                writer.write("Account: " + flag_fdacc);
-//                writer.newLine();
-//                writer.write("Account Number: ");
-//                writer.write(String.valueOf(element.getAccountNumber()));
-//                writer.newLine();
-//                writer.write("FD Creation Date: ");
-//                writer.write(String.valueOf(element.getCreationDate()));
-//                writer.newLine();
-//                writer.write("Maturity date of the FD: ");
-//                writer.write(String.valueOf(element.getMaturityDate()));
-//                writer.newLine();
-//                writer.write("Amount user deposited for the FD: ");
-//                writer.write(String.valueOf(element.getPrincipal()));
-//                writer.newLine();
-//                writer.write("Amount user will get after the completion of the FD: ");
-//                writer.write(String.valueOf(element.getMaturityAmount()));
-//                writer.newLine();
-//                writer.newLine();// Add a newline for each element
-//            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
+    catch (IOException ex) {
+            throw new RuntimeException(ex);
+    }
+}
 
 
 

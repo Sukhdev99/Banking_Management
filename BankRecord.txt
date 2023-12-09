@@ -1,8 +1,27 @@
 -------------------Account Information-------------------------
 Account: 1
-Name: Sukhdev
+Name: gg
 Account Number: 12345678
 PIN: *******
 
 -------------------Account Transactions-------------------------
----------------------FD Accounts------------------------------------------------------------------------
+Account: 2
+Name: hh
+Account Number: 12345687
+PIN: *******
+
+-------------------Account Transactions-------------------------
+---------------------FD Accounts------------------------------------------------------------------------Account: 1
+Account Number: 12345678
+FD Creation Date: 2023-12-08
+Maturity date of the FD: 2024-03-08
+Amount user deposited for the FD: 5.0E7
+Amount user will get after the completion of the FD: 5.0125104195601836E7
+
+Account: 2
+Account Number: 12345687
+FD Creation Date: 2023-12-08
+Maturity date of the FD: 2025-10-08
+Amount user deposited for the FD: 5.0E11
+Amount user will get after the completion of the FD: 5.3308525808473206E11
+
